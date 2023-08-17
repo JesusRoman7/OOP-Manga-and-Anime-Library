@@ -100,9 +100,16 @@ class Anime extends Manga{
         this.#animationStudio = animationStudio,
         this.#illustrator = illustrator
     }
+
+    getAllInfo(){
+        super.getInfo()
+        let info = `Animation Studio: ${this.#animationStudio}, Illustrator: ${this.#illustrator}`
+        console.log(info);
+    }
 }
 
 //Instanciando el Anime
 const anime1 = new Anime('One Punch Man', 'ONE', 300, 25, 1, 'MadHouse', 'Yusuke Murata');
 console.log(anime1);
-console.log(anime1.getInfo()); //la funcion getInfo fue heredada, entonces no fue necesario escribirla de nuevo en la clase de Anime
+console.log(anime1.getAllInfo()); //la funcion getInfo fue heredada, entonces no fue necesario escribirla de nuevo en la clase de Anime
+//Mas sin embargo no nos muestra TODAS las propiedades(las nuevas), para esto hay que declarar de nuevo la funcion
