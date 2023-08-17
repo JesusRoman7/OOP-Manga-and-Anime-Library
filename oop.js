@@ -88,3 +88,21 @@ console.log(manga1); //Aqui el objeto saldra con title: new title
 console.log(manga1.title); //New title
 
 console.log(manga1.getInfo());
+
+//Agregando mas funcionalidad al proyecto, en este caso seran Animes
+//Los animes tendran las mismas propiedas mas: casa animadora y genero
+//Osease en este caso usaremos la HERENCIA
+class Anime extends Manga{
+    #animationStudio
+    #illustrator
+    constructor(title, author, price, stock, id, animationStudio, illustrator){
+        super(title, author, price, stock, id)
+        this.#animationStudio = animationStudio,
+        this.#illustrator = illustrator
+    }
+}
+
+//Instanciando el Anime
+const anime1 = new Anime('One Punch Man', 'ONE', 300, 25, 1, 'MadHouse', 'Yusuke Murata');
+console.log(anime1);
+console.log(anime1.getInfo()); //la funcion getInfo fue heredada, entonces no fue necesario escribirla de nuevo en la clase de Anime
