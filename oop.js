@@ -1,3 +1,4 @@
+//Una Clase es donde tendremos los Atributos(Propiedades) y Metodos(Funciones) de nuestro objeto que queremos crear
 class Manga {
     // constructor(t, a, p, s, i){
     //     this.title = t,
